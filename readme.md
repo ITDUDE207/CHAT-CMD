@@ -22,6 +22,22 @@ You can also start it interactively with:
 python main.py
 ```
 
+## Build a Windows installer with Inno Setup
+
+Run this PowerShell script from the project folder:
+
+```powershell
+./build_inno.ps1
+```
+
+It will create:
+
+```text
+chatapp-setup.exe
+```
+
+This uses Inno Setup for a standard Windows installer experience.
+
 ## Features
 
 - Relay messages between two clients over the internet
