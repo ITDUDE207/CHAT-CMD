@@ -1,19 +1,19 @@
-# Wi-Fi Console Texting App
+# Cross-Network Console Chat
 
-This workspace now contains a simple Python texting app that works over a local Wi-Fi network.
+This workspace now contains a simple Python chat app that can work across different Wi-Fi networks.
 
 ## Run it
 
-Start the server on one device:
+Start a relay server on a machine that is reachable over the internet:
 
 ```bash
-python main.py --server
+python main.py --relay-server --port 9000
 ```
 
-Connect from another device on the same local network:
+Connect from another device using that machine's public IP or domain:
 
 ```bash
-python main.py --client 192.168.1.50
+python main.py --relay-client 203.0.113.10 --port 9000
 ```
 
 You can also start it interactively with:
@@ -24,8 +24,8 @@ python main.py
 
 ## Features
 
-- Start a chat server on one device
-- Join that chat server from another device on the same Wi-Fi network
+- Relay messages between two clients over the internet
+- Works even when the devices are on different Wi-Fi networks
 - Send and receive messages in the console
 - Exit cleanly with /quit
 
